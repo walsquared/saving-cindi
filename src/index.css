@@ -1,7 +1,8 @@
 * {
   --white: #F6F6F6;
   --black: #151515;
-  --primaryColor: #00C9E4;
+  /* --primaryColor: #00C9E4; */
+  --primaryColor: red;
   --accentColor: #D804A9;
 }
 
