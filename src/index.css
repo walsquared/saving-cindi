@@ -33,7 +33,7 @@ h1 {
   font-family: 'Domine', serif;
   font-size: 96px;
   font-weight: 300;
-  margin: 75px 0 10px;
+  margin: 60px 0 10px;
 }
 
 h4 {
@@ -70,6 +70,11 @@ p {
   -webkit-user-select: none;
 }
 
+#socialLinks {
+  display: flex;
+  flex-direction: row;
+}
+
 .buttonContainer {
   margin: 20px;
   padding: 15px 25px;
@@ -86,5 +91,21 @@ p {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   border-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+.socialButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 20px 20px;
+  color: var(--primaryColor);
+  font-size: 20px;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.socialButton:hover {
   color: var(--accentColor);
 }
