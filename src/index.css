@@ -105,7 +105,7 @@ p {
 @media only screen and (min-width: 700px) {
   #root {
     background-image: url('./assets/paperBkg.png'), url('./assets/texturedBkg.png');
-    background-position: top, center;
+    background-position: top, 0 55vw;
     background-size: 100vw;
   }
   
