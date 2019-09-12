@@ -31,9 +31,9 @@ a {
 
 h1 {
   font-family: 'Domine', serif;
-  font-size: 96px;
+  font-size: 55px;
   font-weight: 300;
-  margin: 60px 0 10px;
+  margin: 45px 0 10px;
 }
 
 h4 {
@@ -48,21 +48,20 @@ p {
 }
 
 #root {
+  background-repeat: no-repeat;
   background-color: var(--black);
-  background-image: url('./assets/bkg.png');
-  background-position: center;
-  background-size: cover;
+  background-image: url('./assets/paperBkg.png'), url('./assets/texturedBkg.png');
+  background-position: top, 0 40%;
+  background-size: auto 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  width: 100vw;
-  height: 100vh;
 }
 
 #logo {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 
   user-select: none;
   -moz-user-select: none;
@@ -72,7 +71,9 @@ p {
 
 #socialLinks {
   display: flex;
+  height: 300vh;
   flex-direction: row;
+  align-items: flex-end;
 }
 
 .buttonContainer {
@@ -85,14 +86,9 @@ p {
   font-size: 20px;
   text-align: center;
   transition: 0.25s;
+  z-index: 1;
 }
 
-.buttonContainer:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: var(--accentColor);
-  color: var(--accentColor);
-}
 
 .socialButton {
   display: flex;
@@ -100,12 +96,27 @@ p {
   justify-content: center;
   align-items: center;
   margin: 80px 20px 20px;
-  color: var(--primaryColor);
+  color: var(--white);
   font-size: 20px;
   text-align: center;
   transition: 0.25s;
 }
 
-.socialButton:hover {
-  color: var(--accentColor);
+@media only screen and (min-width: 700px) {
+  #root {
+    background-image: url('./assets/paperBkg.png'), url('./assets/texturedBkg.png');
+    background-position: top, center;
+    background-size: 100vw;
+  }
+  
+  .buttonContainer:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--accentColor);
+    color: var(--accentColor);
+  }
+  
+  .socialButton:hover {
+    color: var(--accentColor);
+  }
 }
