@@ -1,0 +1,38 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  color: var(--black);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--primaryColor), 0 0 0.1em var(--black);
+  width: 100vw;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 36px;
+  font-family: 'Domine', serif;
+  margin: 0 40px;
+}
+
+.button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 30px;
+}
+
+@media only screen and (min-width: 700px) {
+  .button {
+    width: 55px;
+  }
+
+  .button:hover {
+    color: var(--white);
+  }
+}
