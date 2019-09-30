@@ -36,15 +36,31 @@ h1 {
   margin: 45px 0 10px;
 }
 
-h4 {
+h2 {
   font-family: 'Domine', serif;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: 300;
-  margin-bottom: 0px;
+  text-align: center;
+  margin: 45px 0 10px;
 }
+
+h3 {
+  font-family: 'Domine', serif;
+  font-size: 21px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+
 p {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #root {
@@ -75,6 +91,7 @@ p {
   align-items: flex-end;
 }
 
+/* Promo section styles */
 #promoSection {
   overflow: visible;
   display: flex;
@@ -112,6 +129,32 @@ p {
   width: 150px;
 }
 
+/* About section styles */
+#aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+}
+
+#tallPhoto {
+  width: 90vw;
+  margin-top: 50px;
+}
+
+#names {
+  display: flex;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  margin: 10px 0;
+}
 
 .socialButton {
   display: flex;
@@ -126,11 +169,26 @@ p {
 }
 
 @media only screen and (min-width: 700px) {
+  h3 {
+    font-family: 'Domine', serif;
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 0;
+  }
+  
   #root {
     background-position: center 500px;
     background-size: 2000px auto;
   }
 
+  /* Promo section styles */
   #promoSection {
     height: 100vh;
     min-height: 675px;
@@ -147,6 +205,27 @@ p {
     color: var(--accentColor);
   }
   
+  /* About section styles */
+  #aboutSection {
+    max-width: 1024px;
+  }
+
+  #widePhoto {
+    width: 90vw;
+    height: auto;
+    margin-top: 50px;
+    max-width: 1024px;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 4vw;
+    width: 125px;
+  }
+
   .socialButton:hover {
     color: var(--accentColor);
   }
