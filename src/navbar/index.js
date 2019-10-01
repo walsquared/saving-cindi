@@ -5,8 +5,8 @@ import styles from './index.module.css'
 
 import {useMobile} from '../hooks';
 
-const Button = ({label, link}) => (
-  <div className={styles.button}>
+const Button = ({label, section}) => (
+  <div className={styles.button} onClick={() => document.getElementById(section).scrollIntoView()}>
     {label}
   </div>
 )
@@ -26,13 +26,13 @@ const Navbar = () => {
   } else {
     return (
       <div id={styles.container}>
-        <Button label='HOME' link=''/>
-        <Button label='ABOUT' link=''/>
+        <Button label='HOME' section='home'/>
+        <Button label='ABOUT' section='about'/>
         <div id={styles.title}>
           SAVING CINDI
         </div>
-        <Button label='SHOWS' link=''/>
-        <Button label='CONTACT' link=''/>
+        <Button label='SHOWS' section='shows'/>
+        <Button label='CONTACT' section='contact'/>
       </div>
     );
   }

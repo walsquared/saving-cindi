@@ -80,6 +80,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div id='shows'></div>
       <div id='contact'>
         <img id='logoSmall' src={Logo} alt='Saving Cindi Logo'/>
         <div id='socialLinks'>
