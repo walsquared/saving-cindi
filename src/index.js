@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faTwitter,
+  faInstagram,
+  faSpotify,
+  faItunesNote,
+  faGooglePlay,
+  faAmazon,
+} from '@fortawesome/free-brands-svg-icons';
 import './index.css'
 
 import Navbar from './navbar';
@@ -12,9 +19,9 @@ import Logo from './assets/logo.png';
 import TallPhoto from './assets/theGroup.jpg';
 import WidePhoto from './assets/theGroup-wide.jpg';
 
-const Button = ({label, link}) => (
-  <a href={link} className='buttonContainer' target='_blank' rel='noopener noreferrer external'>
-    {label}
+const Button = ({label, link, className}) => (
+  <a href={link} className={`buttonContainer ${className}`} target='_blank' rel='noopener noreferrer external'>
+    {label.toUpperCase()}
   </a>
 );
 
@@ -45,13 +52,13 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div id='promoSection'>
+      <div id='home'>
         <div id='promo'>
           <img id='loveMeCover' src={LoveMe} alt='Love Me'/>
-          <Button label='LISTEN' link='https://songwhip.com/album/the-experience/love-me'/>
+          <Button label='listen' link='https://songwhip.com/album/the-experience/love-me'/>
         </div>
       </div>
-      <div id='aboutSection'>
+      <div id='about'>
         <img id='logo' src={Logo} alt='Saving Cindi Logo'/>
         <h2>WE ARE SAVING CINDI</h2>
         <p>
@@ -73,11 +80,24 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <div id='socialLinks'>
-        <SocialLink faIcon={faTwitter} label='SavingCindi' link='https://twitter.com/savingcindi'/>
-        <SocialLink faIcon={faEnvelope} label='booking@savingcindi.com' link='mailto:info@savingcindi.com'/>
-        <SocialLink faIcon={faInstagram} label='savingcindi' link='https://www.instagram.com/savingcindi/'/>
-      </div> */}
+      <div id='contact'>
+        <img id='logoSmall' src={Logo} alt='Saving Cindi Logo'/>
+        <div id='socialLinks'>
+          <SocialLink faIcon={faTwitter} link='https://twitter.com/savingcindi'/>
+          <SocialLink faIcon={faInstagram} link='https://www.instagram.com/savingcindi/'/>
+          <SocialLink faIcon={faSpotify} link='https://open.spotify.com/artist/0kXWGYwMlgnhFVm3BZTJcY?si=cTBxgxJzQfqxFK-ZPz2tFw'/>
+          <SocialLink faIcon={faItunesNote} link='https://music.apple.com/ca/artist/the-experience/1438057488'/>
+          <SocialLink faIcon={faAmazon} link='https://music.amazon.com/artists/B00OUJBPZQ?ref=dm_sh_c37f-d13b-dmcp-df80-79c19&musicTerritory=US&marketplaceId=ATVPDKIKX0DER'/>
+        </div>
+        <Button label='info@savingcindi.com' className='emailButton' link='mailto:info@savingcindi.com'/>
+        <div className='tailText'>
+          Created with <span role='img' aria-label='love'>💖</span> by
+          <a href='https://walcreates.ca'target='_blank' rel='noopener noreferrer external'>
+            <Highlight> Wal Wal<Icon icon={faExternalLinkAlt} style={{paddingLeft: '5px'}}/></Highlight>
+          </a>
+        </div>
+        <div className='tailText'>Copyright 2019 © Saving Cindi. All rights reserved.</div>
+      </div>
     </>
   );
 }

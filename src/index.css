@@ -74,25 +74,8 @@ p {
   align-items: center; 
 }
 
-#logo {
-  width: 200px;
-  height: 200px;
-
-  user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-}
-
-#socialLinks {
-  display: flex;
-  height: 300vh;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-/* Promo section styles */
-#promoSection {
+/* Home section styles */
+#home {
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -126,15 +109,26 @@ p {
   text-align: center;
   transition: 0.25s;
   z-index: 1;
-  width: 150px;
+  min-width: 150px;
 }
 
 /* About section styles */
-#aboutSection {
+#about {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90vw;
+}
+
+
+#logo {
+  width: 200px;
+  height: 200px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
 
 #tallPhoto {
@@ -156,16 +150,47 @@ p {
   margin: 10px 0;
 }
 
-.socialButton {
+/* Contact section styles */
+#contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#logoSmall {
+  width: 100px;
+  height: 100px;
+}
+
+#socialLinks {
+  display: flex;
+}
+
+.emailButton {
+  color: var(--white);
+  border-color: var(--white);
+  margin: 15px 0 50px 0;
+}
+
+.emailButton:hover {
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+.socialButton {
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 80px 20px 20px;
+  margin: 20px 20px;
   color: var(--white);
   font-size: 20px;
   text-align: center;
   transition: 0.25s;
+}
+
+.tailText {
+  margin: 10px 0;
 }
 
 @media only screen and (min-width: 700px) {
