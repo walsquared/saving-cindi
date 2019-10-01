@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { 
   faTwitter,
   faInstagram,
   faSpotify,
   faItunesNote,
-  faGooglePlay,
   faAmazon,
 } from '@fortawesome/free-brands-svg-icons';
 import './index.css'
