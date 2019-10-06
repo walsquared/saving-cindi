@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import {useSpring, animated} from 'react-spring'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -47,13 +48,28 @@ function App() {
       {children}
     </span>
   );
+  
+  const [isOn, toggle] = useState(false);
+  const {rotation} = useSpring({rotation: isOn ? 540 : 0})
 
   return (
     <>
       <Navbar/>
       <div id='home'>
         <div id='promo'>
-          <img id='loveMeCover' src={LoveMe} alt='Love Me'/>
+          {/* <div id='loveMeOutline'>
+            <img id='loveMeCover' src={LoveMe} alt='Love Me'/>
+          </div> */}
+          {console.log(rotation)}
+          <animated.svg viewBox="0 0 10 10" onMouseEnter={() => {toggle(true); console.log("ON")}} onMouseLeave={() => {toggle(false); console.log("OFF")}}>
+            <defs>
+              <linearGradient id="myGradient" gradientTransform={rotation.interpolate(v => `rotate(${v})`)}>
+                <stop offset="0%"  stopColor="gold" />
+                <stop offset="100%" stopColor="red" />
+              </linearGradient>
+            </defs>
+            <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+          </animated.svg>
           <Button label='listen' link='https://songwhip.com/album/the-experience/love-me'/>
         </div>
       </div>

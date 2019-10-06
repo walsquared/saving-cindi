@@ -68,7 +68,7 @@ p {
 #root {
   background-repeat: no-repeat;
   background-color: var(--black);
-  background-image: url('./assets/bkg.png');
+  /* background-image: url('./assets/bkg.png'); */
   /* background-image: url('./assets/texturedBkg.png'); */
   /* background-position: center 28%; */
   background-position: center calc(-700px + 20vh );
@@ -100,6 +100,26 @@ p {
 #loveMeCover {
   width: 300px;
   height: 300px;
+  opacity: 0;
+}
+
+#loveMeOutline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 305px;
+  height: 305px;
+  background: linear-gradient(var(--primaryColor), var(--accentColor));
+  animation: turn 5s ease-out;
+}
+
+@keyframes turn {
+  from {
+    background: linear-gradient(var(--primaryColor), var(--accentColor))
+  }
+  to {
+    background: linear-gradient(540deg, var(--primaryColor), var(--accentColor))
+  }
 }
 
 .buttonContainer {
