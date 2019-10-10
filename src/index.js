@@ -57,19 +57,9 @@ function App() {
       <Navbar/>
       <div id='home'>
         <div id='promo'>
-          {/* <div id='loveMeOutline'>
+          <div id='loveMeOutline'>
             <img id='loveMeCover' src={LoveMe} alt='Love Me'/>
-          </div> */}
-          {console.log(rotation)}
-          <animated.svg viewBox="0 0 10 10" onMouseEnter={() => {toggle(true); console.log("ON")}} onMouseLeave={() => {toggle(false); console.log("OFF")}}>
-            <defs>
-              <linearGradient id="myGradient" gradientTransform={rotation.interpolate(v => `rotate(${v})`)}>
-                <stop offset="0%"  stopColor="gold" />
-                <stop offset="100%" stopColor="red" />
-              </linearGradient>
-            </defs>
-            <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
-          </animated.svg>
+          </div>
           <Button label='listen' link='https://songwhip.com/album/the-experience/love-me'/>
         </div>
       </div>

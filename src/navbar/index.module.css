@@ -16,6 +16,10 @@
   font-size: 36px;
   font-family: 'Domine', serif;
   margin: 0 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #menuButton {

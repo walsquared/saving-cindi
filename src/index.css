@@ -68,9 +68,8 @@ p {
 #root {
   background-repeat: no-repeat;
   background-color: var(--black);
-  /* background-image: url('./assets/bkg.png'); */
-  /* background-image: url('./assets/texturedBkg.png'); */
-  /* background-position: center 28%; */
+  background-image: url('./assets/bkg.png');
+  background-position: center 28%;
   background-position: center calc(-700px + 20vh );
   background-size: 2000px auto;
   display: flex;
@@ -100,7 +99,7 @@ p {
 #loveMeCover {
   width: 300px;
   height: 300px;
-  opacity: 0;
+  border: solid 1px var(--accentColor)
 }
 
 #loveMeOutline {
@@ -109,17 +108,7 @@ p {
   align-items: center;
   width: 305px;
   height: 305px;
-  background: linear-gradient(var(--primaryColor), var(--accentColor));
-  animation: turn 5s ease-out;
-}
-
-@keyframes turn {
-  from {
-    background: linear-gradient(var(--primaryColor), var(--accentColor))
-  }
-  to {
-    background: linear-gradient(540deg, var(--primaryColor), var(--accentColor))
-  }
+  background: linear-gradient(var(--primaryColor) 65%, var(--accentColor));
 }
 
 .buttonContainer {
@@ -248,6 +237,10 @@ p {
   }
   
   /* About section styles */
+  #about {
+    max-width: 1024px;
+  }
+  
   #aboutSection {
     max-width: 1024px;
   }
