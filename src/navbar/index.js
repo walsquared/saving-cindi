@@ -1,8 +1,9 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
-import styles from './index.module.css'
+
 import {useMobile} from 'hooks'
+import styles from './index.module.css'
 
 const Button = ({label, section}) => (
   <div

@@ -31,7 +31,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   text-align: center;
-  margin: 0 20px;
+  width: 30px;
   cursor: pointer;
   transition: 0.3s;
   -webkit-user-select: none;
@@ -57,13 +57,17 @@
 }
 
 .buttonLabel:hover:after { 
-  width: 100%; 
-  left: 0; 
+  width: 80%; 
+  left: 10%; 
   background: var(--white);
 }
 
 
 @media only screen and (min-width: 700px) {
+  .buttonLabel {
+    width: 100px;
+  }
+
   .buttonLabel:hover {
     color: var(--white);
   }

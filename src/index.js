@@ -11,15 +11,12 @@ import {
   faItunesNote,
   faAmazon,
 } from '@fortawesome/free-brands-svg-icons';
-import './index.css'
-import {Button} from 'components';
+
 import Navbar from 'navbar';
 import {useMobile} from 'hooks';
-
-import LoveMe from 'assets/loveMe.jpg';
-import Logo from 'assets/logo.png';
-import TallPhoto from 'assets/theGroup.jpg';
-import WidePhoto from 'assets/theGroup-wide.jpg';
+import {Button} from 'components';
+import {Logo, LoveMeCover, TallPhoto, WidePhoto} from 'assets';
+import './index.css'
 
 const GroupPhoto = () => {
   const isMobile = useMobile();
@@ -52,7 +49,7 @@ const Home = () => {
     <div id='home' ref={inViewRef}>
       <div id='promo'>
         <div>
-          <animated.img id='loveMeCover' src={LoveMe} alt='Love Me' style={fadeIn}/>
+          <animated.img id='loveMeCover' src={LoveMeCover} alt='Love Me' style={fadeIn}/>
           <animated.svg id='loveMeOutline' style={drawStroke}>
             <rect width="100%" height="100%"/>
           </animated.svg> 
