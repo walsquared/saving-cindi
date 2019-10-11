@@ -102,6 +102,10 @@ p {
   width: 300px;
   height: 300px;
   position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   /* border: solid 1px var(--accentColor) */
 }
 

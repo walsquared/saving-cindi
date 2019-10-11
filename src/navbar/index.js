@@ -2,22 +2,17 @@ import React, {useRef} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import styles from './index.module.css'
-import {ReactComponent as Underline} from 'assets/button-underline.svg';
-import {useMobile} from 'hooks';
+import {useMobile} from 'hooks'
 
+const Button = ({label, section}) => (
+  <div
+    className={styles.buttonLabel}
+    onClick={() => document.getElementById(section).scrollIntoView()}
+  >
+    {label}
+  </div>
+)
 
-const Button = ({label, section}) => {
-  const buttonRef = useRef();
-
-  return (
-    <div>
-      <div ref={buttonRef} className={styles.buttonLabel} onClick={() => document.getElementById(section).scrollIntoView()}>
-        {label}
-      </div>
-      {/* <Underline className={styles.buttonUnderline}/> */}
-    </div>
-  )
-}
 const Navbar = () => {
   const isMobile = useMobile();
 
