@@ -15,7 +15,7 @@ import {
 import Navbar from 'navbar';
 import {useMobile} from 'hooks';
 import {Button} from 'components';
-import {Logo, LoveMeCover, TallPhoto, WidePhoto} from 'assets';
+import {Background, Logo, LoveMeCover, TallPhoto, WidePhoto} from 'assets';
 import './index.css'
 
 const GroupPhoto = () => {
@@ -47,6 +47,7 @@ const Home = () => {
 
   return (
     <div id='home' ref={inViewRef}>
+      <animated.img id='background' src={Background} alt='bkg' style={fadeIn}/>
       <div id='promo'>
         <div>
           <animated.img id='loveMeCover' src={LoveMeCover} alt='Love Me' style={fadeIn}/>
