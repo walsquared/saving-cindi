@@ -28,21 +28,35 @@
   left: 18px;
 }
 
-.button {
+.buttonLabel {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   margin: 0 20px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
   width: 30px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
+.buttonUnderline {
+  width: 50px;
+  stroke-width: 5px;
+}
+
+.buttonUnderline:hover {
+
+}
+
+
 @media only screen and (min-width: 700px) {
-  .button {
+  .buttonLabel {
     width: 55px;
   }
 
-  .button:hover {
+  .buttonLabel:hover {
     color: var(--white);
   }
 }

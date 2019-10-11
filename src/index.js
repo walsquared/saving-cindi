@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import ReactDOM from 'react-dom';
-import {useSpring, animated} from 'react-spring'
+import {useInView} from 'react-intersection-observer';
+import {animated, useChain, useSpring} from 'react-spring';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -11,19 +12,14 @@ import {
   faAmazon,
 } from '@fortawesome/free-brands-svg-icons';
 import './index.css'
+import {Button} from 'components';
+import Navbar from 'navbar';
+import {useMobile} from 'hooks';
 
-import Navbar from './navbar';
-import {useMobile} from './hooks';
-import LoveMe from './assets/loveMe.jpg';
-import Logo from './assets/logo.png';
-import TallPhoto from './assets/theGroup.jpg';
-import WidePhoto from './assets/theGroup-wide.jpg';
-
-const Button = ({label, link, className}) => (
-  <a href={link} className={`buttonContainer ${className}`} target='_blank' rel='noopener noreferrer external'>
-    {label.toUpperCase()}
-  </a>
-);
+import LoveMe from 'assets/loveMe.jpg';
+import Logo from 'assets/logo.png';
+import TallPhoto from 'assets/theGroup.jpg';
+import WidePhoto from 'assets/theGroup-wide.jpg';
 
 const GroupPhoto = () => {
   const isMobile = useMobile();
@@ -41,6 +37,41 @@ const SocialLink = ({faIcon, label, link}) => (
   </a>
 )
 
+const Home = () => {
+  const [inViewRef, inView] = useInView();
+
+  const drawRef = useRef();
+  const drawStroke = useSpring({ref: drawRef, to: {strokeDashoffset: 0}, from: {strokeDashoffset: 1200}, config: {delay: 1500}})
+
+  const fadeRef = useRef();
+  const fadeIn = useSpring({ref: fadeRef, to: {opacity: 1}, from: {opacity: 0}})
+
+  useChain(inView ? [drawRef, fadeRef] : [])
+
+  return (
+    <div id='home' ref={inViewRef}>
+      <div id='promo'>
+        <div>
+          <animated.img id='loveMeCover' src={LoveMe} alt='Love Me' style={fadeIn}/>
+          <animated.svg id='loveMeOutline' style={drawStroke}>
+            <rect width="100%" height="100%"/>
+          </animated.svg> 
+        </div>
+      <Button label='listen' link='https://songwhip.com/album/the-experience/love-me' style={fadeIn} color={getComputedStyle(document.documentElement).getPropertyValue('--accentColor')}/>
+      </div>
+    </div>
+  );
+}
+
+const About = () => {
+}
+
+const Shows = () => {}
+
+const Contacts = () => {
+
+}
+
 function App() {
 
   const Highlight = ({children}) => (
@@ -55,15 +86,8 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div id='home'>
-        <div id='promo'>
-          <div id='loveMeOutline'>
-            <img id='loveMeCover' src={LoveMe} alt='Love Me'/>
-          </div>
-          <Button label='listen' link='https://songwhip.com/album/the-experience/love-me'/>
-        </div>
-      </div>
-      <div id='about'>
+      <Home/>
+      {/* <div id='about'>
         <img id='logo' src={Logo} alt='Saving Cindi Logo'/>
         <h2>WE ARE SAVING CINDI</h2>
         <p>
@@ -103,7 +127,7 @@ function App() {
           </a>
         </div>
         <div className='tailText'>Copyright 2019 © Saving Cindi. All rights reserved.</div>
-      </div>
+      </div> */}
     </>
   );
 }
