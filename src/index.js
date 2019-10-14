@@ -75,7 +75,6 @@ const Home = () => {
 
 const About = () => {
   const [inViewRef, inView] = useInView({threshold: 0.25, triggerOnce: true});
-
   const contentTrail = useFadeIn(5, undefined, inView);
 
   return (
@@ -110,8 +109,14 @@ const About = () => {
 }
 
 const Shows = () => {
+  const [inViewRef, inView] = useInView({threshold: 0.25, triggerOnce: true});
+  const contentTrail = useFadeIn(5, undefined, inView);
+
   return (
-    <div id='shows'></div>
+    <div id='shows' ref={inViewRef}>
+      <animated.h2 style={contentTrail[0]}>SHOWS</animated.h2>
+      <animated.p style={contentTrail[1]}>Stay tuned!</animated.p>
+    </div>
   )
 }
 

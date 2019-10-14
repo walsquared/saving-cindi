@@ -20,7 +20,7 @@ const Navbar = () => {
   if (isMobile) {
     return (
       <div id={styles.container}>
-        <FontAwesomeIcon id={styles.menuButton} icon={faBars} size='lg'/>
+        {/* <FontAwesomeIcon id={styles.menuButton} icon={faBars} size='lg'/> */}
         <div id={styles.title}>
           SAVING CINDI
         </div>
