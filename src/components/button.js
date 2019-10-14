@@ -32,7 +32,6 @@ const Button = ({label, link, style, activeColor = 'white', idleColor = 'black'}
     borderWidth: !isMobile ? 'unset' : '2px'
   }
 
-  console.log(perimeter)
   const drawStroke = useSpring({
     stroke: hovering ? activeColor : idleColor,
     strokeDashoffset: hovering ? 0 : perimeter,
