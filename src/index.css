@@ -70,7 +70,8 @@ p {
   background-color: var(--black);
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
+  overflow: hidden;
 }
 
 /* Home section styles */
@@ -86,7 +87,8 @@ p {
 
 #background {
   position: absolute;
-  width: 110vw;
+  top: 0;
+  width: 1000px;
 }
 
 #promo {
@@ -234,7 +236,7 @@ p {
 
   #background {
     width: 2000px;
-    top: -500px;
+    top: -525px;
     left: -25px;
   }
   

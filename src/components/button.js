@@ -1,10 +1,11 @@
 import React, {useLayoutEffect, useRef, useState} from 'react';
 import {animated, useSpring} from 'react-spring';
-
+import {useMobile} from 'hooks'
 import styles from './button.module.css';
 
 const Button = ({label, link, style, activeColor = 'white', idleColor = 'black'}) => {
   const buttonRef = useRef();
+  const isMobile = useMobile();
   const [hovering, toggleHover] = useState(false);
 
   const [dimensions, setDimensions] = useState({})
@@ -18,8 +19,17 @@ const Button = ({label, link, style, activeColor = 'white', idleColor = 'black'}
     setPerimeter(buttonRef.current.offsetWidth*2 + buttonRef.current.offsetHeight*2)
   }, [buttonRef.current])
 
+  const borderStyle = {
+    borderColor: idleColor,
+    borderStyle: 'solid',
+    borderWidth: '2px'
+  }
+
   const labelStyle = {
-    color: hovering ? activeColor : idleColor
+    color: hovering ? activeColor : idleColor,
+    borderColor: !isMobile ? 'unset' : idleColor,
+    borderStyle: !isMobile ? 'unset' : 'solid',
+    borderWidth: !isMobile ? 'unset' : '2px'
   }
 
   console.log(perimeter)
@@ -36,7 +46,7 @@ const Button = ({label, link, style, activeColor = 'white', idleColor = 'black'}
         ref={buttonRef}
         className={styles.label}
         style={labelStyle}
-        onMouseEnter={() => toggleHover(true)}
+        onMouseEnter={() => isMobile ? {} : toggleHover(true)}
         onMouseLeave={() => toggleHover(false)}
         href={link}
         target='_blank'
