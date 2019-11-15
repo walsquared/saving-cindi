@@ -101,7 +101,7 @@ const About = () => {
         </div>
         <div className='name'>
           <h3>ÉTIENNE</h3>
-          <h4>Keys</h4>
+          <h4>Drums</h4>
         </div>
       </animated.div>
     </div>
