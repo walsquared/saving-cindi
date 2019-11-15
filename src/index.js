@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import ReactDOM from 'react-dom';
 import {useInView} from 'react-intersection-observer';
 import {animated, useChain, useSpring} from 'react-spring';
@@ -15,7 +15,7 @@ import {
 import Navbar from 'navbar';
 import {useFadeIn, useMobile} from 'hooks';
 import {Button} from 'components';
-import {Background, Logo, LogoOutline, LoveMeCover, TallPhoto, WidePhoto} from 'assets';
+import {Background, Logo, LoveMeCover, TallPhoto, WidePhoto} from 'assets';
 import './index.css'
 
 const GroupPhoto = () => {
@@ -85,7 +85,7 @@ const About = () => {
       </animated.div>
       <animated.h2 style={contentTrail[1]}>WE ARE SAVING CINDI</animated.h2>
       <animated.p style={contentTrail[2]}>
-      Established in April 2018, <Highlight>Saving Cindi</Highlight> is a band based in Ottawa, Canada. They specialize in <Highlight>R&B, Neo-Soul, and Jazz</Highlight>. <Highlight>Vocalist, Jhane Miller</Highlight> (also known as Vauhn) has been singing for over 10 years and has been classically trained in choral music. <Highlight>The bassist, Adam Saint-Fleur</Highlight> not only initiated the band, but has been playing piano for over 10 years. Finally, <Highlight>Étienne Auguste, the drummer</Highlight> has been playing for over 9 years. In October 2018, they released <Highlight>their debut single, Love Me</Highlight>. Since then, they have been working on a project expected to release <Highlight>next summer</Highlight>. Together, they are a group of people that have a <Highlight>burning passion for music</Highlight> and a desire to share it with everyone they meet. 
+      Established in April 2018, Saving Cindi is a new band with a wealth of experience. The band calls <Highlight>Ottawa, Canada</Highlight> home. Its pulse is <Highlight>R&B, Neo-Soul, and Jazz</Highlight>. With a combined <Highlight>30 years</Highlight> of experience, the current members of the band are vocalist, <Highlight>Jhané Miller</Highlight> (also known as Vauhn), keyboardist, <Highlight>Adam Saint-Fleur</Highlight>, and drummer, <Highlight>Étienne Auguste</Highlight>. In October 2018, Saving Cindi released its debut single, <Highlight>"Love Me"</Highlight>. Since then, they have been working on a project which is expected to be released in <Highlight>Summer 2020</Highlight>. Saving Cindi is the intersection between love for music and hard work.
       </animated.p>
       <animated.div style={contentTrail[3]}>
         <GroupPhoto/>
