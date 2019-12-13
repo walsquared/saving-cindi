@@ -45,7 +45,7 @@
   position: relative;
 }
 
-.buttonLabel:after {    
+.buttonLabel:after {
   content: '';
   display: block;
   position: absolute;
@@ -57,12 +57,11 @@
   transition: 0.3s ease 0s, left 0.3s ease 0s;
 }
 
-.buttonLabel:hover:after { 
-  width: 80%; 
-  left: 10%; 
+.buttonLabel:hover:after {
+  width: 80%;
+  left: 10%;
   background: var(--white);
 }
-
 
 @media only screen and (min-width: 700px) {
   .buttonLabel {
