@@ -114,13 +114,14 @@ const About = () => {
 
 const Shows = () => {
   const [inViewRef, inView] = useInView({ threshold: 0.25, triggerOnce: true })
-  const contentTrail = useFadeIn(5, undefined, inView)
+  const contentTrail = useFadeIn(shows.length + 1, undefined, inView)
 
   return (
     <div id='shows' ref={inViewRef}>
       <animated.h2 style={contentTrail[0]}>SHOWS</animated.h2>
-      {shows.map(s => (
+      {shows.map((s, i) => (
         <Show
+          style={contentTrail[i + 1]}
           date={s.date}
           title={s.title}
           time={s.time}

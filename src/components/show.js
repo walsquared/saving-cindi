@@ -1,13 +1,14 @@
 import React from 'react'
+import { animated } from 'react-spring'
 import Button from './button'
 import styles from './show.module.css'
 
-const Show = ({ date, title, time, location, address, mapLink }) => (
-  <div className={styles.container}>
+const Show = ({ date, title, time, location, address, mapLink, style }) => (
+  <animated.div className={styles.container} style={style}>
     <p className={styles.date}>{date}</p>
     <div className={styles.content}>
       <div className={styles.leftText}>
-        <h4>{title}</h4>
+        <p className={styles.title}>{title}</p>
         <p>{time}</p>
       </div>
       <div className={styles.rightText}>
@@ -25,7 +26,7 @@ const Show = ({ date, title, time, location, address, mapLink }) => (
       idleColor={getComputedStyle(document.documentElement).getPropertyValue('--white')}
       link={mapLink}
     />
-  </div>
+  </animated.div>
 )
 
 export default Show

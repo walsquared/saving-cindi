@@ -19,18 +19,11 @@ const Button = ({ label, link, style, activeColor = 'white', idleColor = 'black'
     setPerimeter(buttonRef.current.offsetWidth * 2 + buttonRef.current.offsetHeight * 2)
   }, [buttonRef.current])
 
-  const borderStyle = {
-    borderColor: idleColor,
-    borderStyle: 'solid',
-    borderWidth: '2px'
-  }
-
   const labelStyle = {
     color: hovering ? activeColor : idleColor
-    // borderColor: !isMobile ? 'unset' : idleColor,
-    // borderStyle: !isMobile ? 'unset' : 'solid',
-    // borderWidth: !isMobile ? 'unset' : '2px'
   }
+
+  if (isMobile) labelStyle.borderColor = idleColor
 
   const drawStroke = useSpring({
     stroke: hovering ? activeColor : idleColor,

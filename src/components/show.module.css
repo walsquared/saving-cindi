@@ -1,8 +1,11 @@
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   z-index: 1;
   width: 75%;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .date {
@@ -11,27 +14,51 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 0 2vw;
 }
+
+.title {
+  font-size: 21px;
+}
 .leftText {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 .rightText {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+  align-items: center;
+  text-align: center;
 }
 
 .leftText > p,
 .rightText > p {
   display: flex;
   margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+  .leftText {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .rightText {
+    align-items: flex-end;
+    text-align: right;
+  }
 }
