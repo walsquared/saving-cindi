@@ -119,7 +119,7 @@ const Shows = () => {
   return (
     <div id='shows' ref={inViewRef}>
       <animated.h2 style={contentTrail[0]}>SHOWS</animated.h2>
-      {shows.map((s, i) => (
+      {/* {shows.map((s, i) => (
         <Show
           style={contentTrail[i + 1]}
           date={s.date}
@@ -129,8 +129,8 @@ const Shows = () => {
           address={s.address}
           mapLink={s.mapLink}
         />
-      ))}
-      {/* <animated.p style={contentTrail[1]}>Stay tuned!</animated.p> */}
+      ))} */}
+      <animated.p style={contentTrail[1]}>Stay tuned!</animated.p>
     </div>
   )
 }
