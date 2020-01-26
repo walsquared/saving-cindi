@@ -3,7 +3,7 @@ import { animated, useSpring } from 'react-spring'
 import { useMobile } from 'hooks'
 import styles from './button.module.css'
 
-const Button = ({ label, link, style, activeColor = 'white', idleColor = 'black' }) => {
+const Button = ({ label, link, style, activeColor = 'white', idleColor = 'black', disabled}) => {
   const buttonRef = useRef()
   const isMobile = useMobile()
   const [hovering, toggleHover] = useState(false)
@@ -32,25 +32,42 @@ const Button = ({ label, link, style, activeColor = 'white', idleColor = 'black'
     ...dimensions
   })
 
-  return (
-    <animated.div className={styles.container} style={style}>
-      <a
-        ref={buttonRef}
-        className={styles.label}
-        style={labelStyle}
-        onMouseEnter={() => (isMobile ? {} : toggleHover(true))}
-        onMouseLeave={() => toggleHover(false)}
-        href={link}
-        target='_blank'
-        rel='noopener noreferrer external'
-      >
-        <animated.svg className={styles.stroke} style={drawStroke}>
-          <rect width='100%' height='100%' />
-        </animated.svg>
-        {label.toUpperCase()}
-      </a>
-    </animated.div>
-  )
+  if (disabled) {
+    return (
+      <div className={styles.container} style={style}>
+        <div
+          ref={buttonRef}
+          className={styles.labelDisabled}
+          style={labelStyle}
+        >
+          <animated.svg className={styles.stroke} style={drawStroke}>
+            <rect width='100%' height='100%' />
+          </animated.svg>
+          {label.toUpperCase()}
+        </div>
+      </div>
+    )
+  } else {
+    return (
+      <animated.div className={styles.container} style={style}>
+        <a
+          ref={buttonRef}
+          className={styles.label}
+          style={labelStyle}
+          onMouseEnter={() => (isMobile ? {} : toggleHover(true))}
+          onMouseLeave={() => toggleHover(false)}
+          href={link}
+          target='_blank'
+          rel='noopener noreferrer external'
+        >
+          <animated.svg className={styles.stroke} style={drawStroke}>
+            <rect width='100%' height='100%' />
+          </animated.svg>
+          {label.toUpperCase()}
+        </a>
+      </animated.div>
+    )
+  }
 }
 
 export default Button

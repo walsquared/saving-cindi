@@ -119,7 +119,7 @@ const Shows = () => {
   return (
     <div id='shows' ref={inViewRef}>
       <animated.h2 style={contentTrail[0]}>SHOWS</animated.h2>
-      {/* {shows.map((s, i) => (
+      {shows.map((s, i) => (
         <Show
           style={contentTrail[i + 1]}
           date={s.date}
@@ -127,10 +127,11 @@ const Shows = () => {
           time={s.time}
           location={s.location}
           address={s.address}
-          mapLink={s.mapLink}
+          link={s.link}
+          soldOut={s.soldOut}
         />
-      ))} */}
-      <animated.p style={contentTrail[1]}>Stay tuned!</animated.p>
+      ))}
+      {/* <animated.p style={contentTrail[1]}>Stay tuned!</animated.p> */}
     </div>
   )
 }
@@ -173,7 +174,7 @@ const Contact = () => {
           </Highlight>
         </a>
       </div>
-      <div className='tailText'>Copyright 2019 © Saving Cindi. All rights reserved.</div>
+      <div className='tailText'>Copyright 2020 © Saving Cindi. All rights reserved.</div>
     </div>
   )
 }

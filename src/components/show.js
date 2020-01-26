@@ -1,9 +1,9 @@
-import React from 'react'
-import { animated } from 'react-spring'
-import Button from './button'
-import styles from './show.module.css'
+import React from "react"
+import { animated } from "react-spring"
+import Button from "./button"
+import styles from "./show.module.css"
 
-const Show = ({ date, title, time, location, address, mapLink, style }) => (
+const Show = ({ date, title, time, location, address, link, style, soldOut }) => (
   <animated.div className={styles.container} style={style}>
     <p className={styles.date}>{date}</p>
     <div className={styles.content}>
@@ -17,14 +17,15 @@ const Show = ({ date, title, time, location, address, mapLink, style }) => (
       </div>
     </div>
     <Button
-      label='Map'
+      disabled={soldOut}
+      label={soldOut ? "Sold Out" : "Tickets"}
       style={{
         minWidth: 0
       }}
       className={styles.button}
-      activeColor={getComputedStyle(document.documentElement).getPropertyValue('--accentColor')}
-      idleColor={getComputedStyle(document.documentElement).getPropertyValue('--white')}
-      link={mapLink}
+      activeColor={getComputedStyle(document.documentElement).getPropertyValue("--accentColor")}
+      idleColor={getComputedStyle(document.documentElement).getPropertyValue("--white")}
+      link={link}
     />
   </animated.div>
 )

@@ -1,12 +1,22 @@
 {
   "shows": [
     {
-      "date": "Thursday, December 19",
-      "title": "Havens for Hope",
-      "time": "9PM",
-      "location": "Moscow Tea Room",
-      "address": "527 Sussex Dr, Ottawa, Ontario",
-      "mapLink": "https://g.page/moscowtearoomottawa?share"
+      "date": "Friday, February 7",
+      "title": "A Night of Fashion",
+      "time": "6PM-9PM",
+      "location": "Rebel",
+      "address": "377 Dalhousie St., Ottawa, Ontario",
+      "link": "https://g.page/moscowtearoomottawa?share",
+      "soldOut": true
+    },
+    {
+      "date": "Saturday, February 22",
+      "title": "The Aftermath Exhibition: Limitless",
+      "time": "7PM-10PM",
+      "location": "Saint Brigid's Centre for the Arts",
+      "address": "310 Saint Patrick St., Ottawa, Ontario",
+      "link": "https://www.eventbrite.com/e/the-aftermath-exhibition-limitless-tickets-89716926743",
+      "soldOut": false
     }
   ]
 }

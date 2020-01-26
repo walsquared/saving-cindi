@@ -52,13 +52,15 @@
   .content {
     flex-direction: row;
   }
-  .leftText {
+  .leftText, .leftText > p {
     align-items: flex-start;
     text-align: left;
   }
 
-  .rightText {
+  .rightText, .rightText > p {
     align-items: flex-end;
     text-align: right;
   }
+
+
 }
