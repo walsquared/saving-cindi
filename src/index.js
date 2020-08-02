@@ -119,7 +119,7 @@ const Shows = () => {
   return (
     <div id='shows' ref={inViewRef}>
       <animated.h2 style={contentTrail[0]}>SHOWS</animated.h2>
-      {shows.map((s, i) => (
+      {/* {shows.map((s, i) => (
         <Show
           style={contentTrail[i + 1]}
           date={s.date}
@@ -130,8 +130,8 @@ const Shows = () => {
           link={s.link}
           soldOut={s.soldOut}
         />
-      ))}
-      {/* <animated.p style={contentTrail[1]}>Stay tuned!</animated.p> */}
+      ))} */}
+      <animated.p style={contentTrail[1]}>Stay tuned!</animated.p>
     </div>
   )
 }
@@ -166,7 +166,7 @@ const Contact = () => {
           💖
         </span>{' '}
         by
-        <a href='https://walcreates.ca' target='_blank' rel='noopener noreferrer external'>
+        <a href='https://walwal.me' target='_blank' rel='noopener noreferrer external'>
           <Highlight>
             {' '}
             Wal Wal
