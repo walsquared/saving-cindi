@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/saving-cindi/static/css/main.13489674.chunk.css",
-    "main.js": "/saving-cindi/static/js/main.c52d7f01.chunk.js",
-    "main.js.map": "/saving-cindi/static/js/main.c52d7f01.chunk.js.map",
-    "runtime~main.js": "/saving-cindi/static/js/runtime~main.7d7a7346.js",
-    "runtime~main.js.map": "/saving-cindi/static/js/runtime~main.7d7a7346.js.map",
-    "static/js/2.d06223e2.chunk.js": "/saving-cindi/static/js/2.d06223e2.chunk.js",
-    "static/js/2.d06223e2.chunk.js.map": "/saving-cindi/static/js/2.d06223e2.chunk.js.map",
-    "index.html": "/saving-cindi/index.html",
-    "precache-manifest.65cdd742e4578f81ef8fd22fcdd10bd7.js": "/saving-cindi/precache-manifest.65cdd742e4578f81ef8fd22fcdd10bd7.js",
-    "service-worker.js": "/saving-cindi/service-worker.js",
-    "static/css/main.13489674.chunk.css.map": "/saving-cindi/static/css/main.13489674.chunk.css.map",
-    "static/media/bkg.png": "/saving-cindi/static/media/bkg.42da3840.png",
-    "static/media/logo-lines.14268aa6.svg": "/saving-cindi/static/media/logo-lines.14268aa6.svg",
-    "static/media/logo.png": "/saving-cindi/static/media/logo.556f9151.png",
-    "static/media/loveMe.jpg": "/saving-cindi/static/media/loveMe.56616836.jpg",
-    "static/media/theGroup-wide.jpg": "/saving-cindi/static/media/theGroup-wide.1a20e4fc.jpg",
-    "static/media/theGroup.jpg": "/saving-cindi/static/media/theGroup.25a82649.jpg"
+    "main.css": "/static/css/main.13489674.chunk.css",
+    "main.js": "/static/js/main.c52d7f01.chunk.js",
+    "main.js.map": "/static/js/main.c52d7f01.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.26ea6cdd.js",
+    "runtime~main.js.map": "/static/js/runtime~main.26ea6cdd.js.map",
+    "static/js/2.d06223e2.chunk.js": "/static/js/2.d06223e2.chunk.js",
+    "static/js/2.d06223e2.chunk.js.map": "/static/js/2.d06223e2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ee19194558e0f6140f8d656a2e3b8049.js": "/precache-manifest.ee19194558e0f6140f8d656a2e3b8049.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.13489674.chunk.css.map": "/static/css/main.13489674.chunk.css.map",
+    "static/media/bkg.png": "/static/media/bkg.42da3840.png",
+    "static/media/logo-lines.14268aa6.svg": "/static/media/logo-lines.14268aa6.svg",
+    "static/media/logo.png": "/static/media/logo.556f9151.png",
+    "static/media/loveMe.jpg": "/static/media/loveMe.56616836.jpg",
+    "static/media/theGroup-wide.jpg": "/static/media/theGroup-wide.1a20e4fc.jpg",
+    "static/media/theGroup.jpg": "/static/media/theGroup.25a82649.jpg"
   }
 }
